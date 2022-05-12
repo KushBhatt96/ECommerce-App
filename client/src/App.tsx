@@ -1,7 +1,15 @@
-import React from 'react';
+import './styles.css'
+import IMAGE from './Austin-Image.jpg'
+import Counter from './Counter'
 
 const App = () => {
-  return <div>app</div>;
-};
+  return (
+    <>
+      <h1>ReStore Application</h1>
+      <img src={IMAGE} alt="Austin Downtown" width="400" height="200" />
+      <Counter />
+    </>
+  )
+}
 
-export default App;
+export default App
