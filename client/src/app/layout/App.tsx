@@ -1,6 +1,6 @@
-import AustinImage from '../public/Austin-Image.jpg'
 import { useEffect, useState } from 'react'
-import { Product } from './product'
+import { Product } from '../../app/models/product'
+import Catalog from '../../features/catalog/Catalog'
 
 const App = () => {
   const [products, setProducts] = useState<Product[]>([])
@@ -28,19 +28,10 @@ const App = () => {
       },
     ])
   }
-
   return (
     <div className="app">
       <h1>Re-Store</h1>
-      <img alt="Austin" src={AustinImage} width="500" height="500" />
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - ${product.price}
-          </li>
-        ))}
-      </ul>
-      <button onClick={addProduct}>Add</button>
+      <Catalog products={products} addProduct={addProduct} />
     </div>
   )
 }

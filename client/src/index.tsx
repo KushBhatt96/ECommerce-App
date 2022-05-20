@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import './app/layout/styles.css'
+import App from './app/layout/App'
 
 // React.StrictMode just tells us if we're doing something against best practices
 ReactDOM.render(
