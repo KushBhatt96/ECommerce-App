@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { Product } from '../../app/models/product'
 import Catalog from '../../features/catalog/Catalog'
@@ -24,15 +25,15 @@ const App = () => {
         price: (products.length + 1) * 100,
         brand: 'some brand',
         description: 'some description',
-        pictureUrl: 'http://picsum.photos/2',
+        pictureUrl: 'https://picsum.photos/seed/picsum/200/300',
       },
     ])
   }
   return (
-    <div className="app">
-      <h1>Re-Store</h1>
+    <>
+      <Typography variant="h1">Re-Store</Typography>
       <Catalog products={products} addProduct={addProduct} />
-    </div>
+    </>
   )
 }
 
